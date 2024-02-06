@@ -7,12 +7,14 @@
     Photo prise à <strong>{{ faceSnap.location }}</strong>
   </p>
 
-  <h5>Créé le :  {{ faceSnap.createdDate }}</h5>
-  <h2>
-    <BUtton (click)="onSnaps()">
+  <p>Créé le :  {{ faceSnap.createdDate }}</p>
+  <p>
+    <button (click)="onSnaps()">
       {{ btnText }}
-    </BUtton>
+    </button>
     🙂
-    {{ faceSnap.snaps }}
-  </h2>
+    <strong [ngStyle]="{ background: 'rgb(0,' + faceSnap.snaps +   ',0)' }" style="color:white ">
+      {{ faceSnap.snaps }}
+    </strong>
+  </p>
 </div>

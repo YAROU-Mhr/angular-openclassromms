@@ -16,7 +16,7 @@ export class AppComponent {
         title: 'Archibald',
         description: 'Mon meilleur ami depuis tout petit !',
         createdDate: new Date(),
-        snaps: 0,
+        snaps: 240,
         imageUrl: 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
         location: 'Port-Novo',
       },
@@ -32,7 +32,7 @@ export class AppComponent {
         title: 'Bref',
         description: 'Mon meilleur ami depuis tout petit !',
         createdDate: new Date(),
-        snaps: 10,
+        snaps: 200,
         imageUrl: 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg'
       },
     ];
