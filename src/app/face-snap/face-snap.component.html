@@ -15,6 +15,16 @@
   </p>
 
   <p>
+    {{ 54655226557.889 | number }} <br>
+    <!-- MinimunAvantVirgule.MinimunApresVirgule-MaximunApresVirgule -->
+    <!-- l'arrondissement se fait automatiquement -->
+    {{ 4346234.365587 | number: '1.1-2' }} <br>
+
+    {{ 54657.889 | currency: 'EUR' : 'code'}} <br>
+    {{ 5557.889 |currency: 'EUR'  }} <br>
+    {{ 5557.889 | currency }} <br>
+  </p>
+  <p>
     <button (click)="onSnaps()">
       {{ btnText | lowercase }}
     </button>
