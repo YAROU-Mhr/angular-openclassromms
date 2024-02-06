@@ -1,20 +1,27 @@
 <div class="face-snap-card " [ngClass]="{ snapped: btnText === 'Oh remove Snap !'}">
-  <h1>{{ faceSnap.title }}</h1>
+  <h1>{{ faceSnap.title |  uppercase  }}</h1>
   <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
   <p>{{ faceSnap.description }}</p>
 
-  <p *ngIf="faceSnap.location" >
-    Photo prise à <strong>{{ faceSnap.location }}</strong>
+  <p *ngIf="faceSnap.location">
+    Photo prise à <strong>{{ faceSnap.location | titlecase }}</strong>
   </p>
 
-  <p>Créé le :  {{ faceSnap.createdDate }}</p>
+  <p>Créé  : {{ faceSnap.createdDate | date }}
+    <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  {{ faceSnap.createdDate | date: 'medium' }}
+    <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   {{ faceSnap.createdDate | date: 'longDate' }}
+    <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   {{ faceSnap.createdDate | date: 'longTime' }}
+    <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   {{ faceSnap.createdDate | date: 'le d MMMM yyyy, à HH:mm:ss' }}
+  </p>
+
   <p>
     <button (click)="onSnaps()">
-      {{ btnText }}
+      {{ btnText | lowercase }}
     </button>
     🙂
-    <strong [ngStyle]="{ background: 'rgb(0,' + faceSnap.snaps +   ',0)' }" style="color:white ">
+    <strong [ngStyle]="{ background: 'rgb(0,' + faceSnap.snaps +   ',0)' }" style="color:white; ">
       {{ faceSnap.snaps }}
     </strong>
+
   </p>
 </div>
